@@ -1,0 +1,46 @@
+.character {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.back-to-characters {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+}
+
+.back-to-characters:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+.back-to-characters>img {
+    filter: invert(100%);
+    width: 100%;
+    height: 100%;
+    scale: 3;
+}
+
+.character-img {
+    width: 100%;
+    max-width: 450px;
+    transition: all 500ms;
+}
+
+.character-img:hover {
+    transform: scale(1.03);
+}
