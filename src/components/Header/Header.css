@@ -1,0 +1,35 @@
+
+#header-container{
+    width: 100vw;
+    height: 200px;
+    overflow: hidden;
+}
+.header{
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+}
+#header-home{
+    width: 25%;
+    cursor: pointer;
+}
+#header-logo{
+    width: 50px;
+}
+.header-title{
+    font-size: 24px;
+}
+.header-family-flags-container{
+width: 75%;
+max-width: 1000px;
+}
+.header-family-flags-img{
+width: 100%;
+}

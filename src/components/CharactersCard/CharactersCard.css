@@ -28,7 +28,7 @@
 }
 .character-card:hover{
     scale: 1.05;
-    transform: rotate(-1deg);
+
     .character-card-img-container>img{
         filter: blur(2px);
     }

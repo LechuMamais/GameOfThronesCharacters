@@ -6,7 +6,16 @@ const Character = ()=> {
     
     const [character, setCharacter] = useState();
     const [loading, setLoading] = useState(true);
+    const [girar, setGirar] = useState(false);
     let { id } = useParams();
+
+    const girarDiv = () => {
+      if (girar){
+        setGirar(false);
+      } else {
+        setGirar(true);
+      }
+    }
 
             
     useEffect(() => {
@@ -43,10 +52,14 @@ const Character = ()=> {
                         <img src="../public/assets/arrow-return.png" alt="Back" />
                     </button>
                 </Link>
-                <img className='character-img' src={character.imageUrl} alt={character.name}/>
-                <h1>{character.fullName}</h1>
-                <h2>{character.title}</h2>
-                <h3>{character.family}</h3>
+                <div className='character-info'>
+                    <img className={girar ? 'character-img girar' : 'character-img'} src={character.imageUrl} alt={character.name} onClick={()=>{setGirar(!girar)}}/>
+                    <div className='character-description'>
+                        <h1>{character.fullName}</h1>
+                        <h2>{character.title}</h2>
+                        <h3>{character.family}</h3>
+                    </div>
+                </div>
             </div>
         )
       }
